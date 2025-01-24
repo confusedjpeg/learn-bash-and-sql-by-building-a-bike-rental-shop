@@ -44,8 +44,10 @@ RENT_MENU() {
     read BIKE_ID_TO_RENT
 
     # if input is not a number
-
-    # send to main menu
+    if [[ ! $BIKE_ID_TO_RENT =~ ^[0-9]+$ ]]
+    then
+      # send to main menu
+    fi
 
   fi
 
