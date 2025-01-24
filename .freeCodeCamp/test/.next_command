@@ -282,3 +282,5 @@ psql --username=freecodecamp --dbname=postgres
 ./bike-shop.sh
 [[ a =~ [0-9] ]]
 [[ a1 =~ [0-9] ]]
+[[ a1 =~ ^[0-9]$ ]]
+__vsc_prompt_cmd_original
