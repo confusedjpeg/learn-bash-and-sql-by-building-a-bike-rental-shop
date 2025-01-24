@@ -274,3 +274,4 @@ __vsc_prompt_cmd_original
 \c bikes
 psql --username=freecodecamp --dbname=postgres
 ./bike-shop.sh
+./bike-shop.sh
