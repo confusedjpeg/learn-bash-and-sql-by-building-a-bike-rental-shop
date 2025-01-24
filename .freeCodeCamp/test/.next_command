@@ -33,3 +33,4 @@ ech hello temrinal
 echo hello temrinal
 echo hello terminal
 psql --username=freecodecamp --dbname=postgres
+psql --username=freecodecamp --dbname=postgres
