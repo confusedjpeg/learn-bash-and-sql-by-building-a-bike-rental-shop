@@ -286,3 +286,4 @@ psql --username=freecodecamp --dbname=postgres
 __vsc_prompt_cmd_original
 [[ 1 =~ ^[0-9]$ ]]
 [[ 11 =~ ^[0-9]$ ]]
+[[ 11 =~ ^[0-9]+$ ]]
