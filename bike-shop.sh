@@ -50,6 +50,7 @@ RENT_MENU() {
       MAIN_MENU "That is not a valid bike number."
     else
       # get bike availability
+      read $BIKE_AVAILABILITY=$($PSQL "SELECT available FROM bikes WHERE available = '")
       # if not available 
       # send to main menu
     fi
