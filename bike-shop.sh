@@ -1,4 +1,5 @@
 #!/bin/bash
+
 PSQL="psql -X --username=freecodecamp --dbname=bikes --tuples-only -c"
 
 echo -e "\n~~~~~ Bike Rental Shop ~~~~~\n"
@@ -17,15 +18,14 @@ MAIN_MENU() {
     1) RENT_MENU ;;
     2) RETURN_MENU ;;
     3) EXIT ;;
-    *) MAIN_MENU "Please enter a valid option.";;
+    *) MAIN_MENU "Please enter a valid option." ;;
   esac
-  
 }
 
 RENT_MENU() {
   # get available bikes
   AVAILABLE_BIKES=$($PSQL "SELECT bike_id, type, size FROM bikes WHERE available = true ORDER BY bike_id")
-  
+
   # if no bikes available
   if [[ -z $AVAILABLE_BIKES ]]
   then
@@ -50,14 +50,14 @@ RENT_MENU() {
       MAIN_MENU "That is not a valid bike number."
     else
       # get bike availability
-      read $BIKE_AVAILABILITY=$($PSQL "SELECT available FROM bikes WHERE available = '")
-      # if not available 
+      BIKE_AVAILABILITY=$($PSQL"SELECT available FROM bikes WHERE bike_id=$BIKE_ID_TO_RENT AND available=true")
+
+      # if not available
+
       # send to main menu
+      
     fi
-
   fi
-
-  # send to main menu
 }
 
 RETURN_MENU() {
