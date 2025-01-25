@@ -68,8 +68,9 @@ RENT_MENU() {
           # get new customer name
           echo -e "\nWhat's your name?"
           read CUSTOMER_NAME
-
           # insert new customer
+                    INSERT_CUSTOMER_RESULT=$($PSQL"INSERT INTO customers(phone, name) values('$PHONE_NUMBER','$CUSTOMER_NAME')")
+
 
         fi
       fi
