@@ -85,6 +85,7 @@ RENT_MENU() {
 
         # get bike info
         BIKE_INFO=$($PSQL"SELECT size,type from bikes where bike_id='$BIKE_ID_TO_RENT'")
+        echo "$BIKE_INFO"
 
         # send to main menu
 
