@@ -80,6 +80,7 @@ RENT_MENU() {
         # get bike info
         
         # send to main menu
+        
       fi
     fi
   fi
