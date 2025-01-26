@@ -511,3 +511,8 @@ trap '__vsc_preexec_all "$_"' DEBUG
 __vsc_original_prompt_command=${PROMPT_COMMAND:-}
 ./bike-shop.sh
 ./bike-shop.sh
+\d rentals
+\d rentals
+\c bikes
+\c bikes
+psql --username=freecodecamp --dbname=postgres
