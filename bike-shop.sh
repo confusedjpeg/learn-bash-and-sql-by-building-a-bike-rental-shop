@@ -125,11 +125,16 @@ RETURN_MENU() {
     done
     # ask for bike to return
     echo -e "\nWhich one would you like to return?"
-    read BIKE_ID_TO_RETURN"
-    # if not a number
-    # send to main menu
-    fi
+    read BIKE_ID_TO_RETURN
 
+    # if not a number
+
+    if [[ ! $BIKE_ID_TO_RETURN =~ ^[0-9]+$ ]]
+    then
+      # send to main menu
+
+    fi
+  fi
   fi
 }
 
