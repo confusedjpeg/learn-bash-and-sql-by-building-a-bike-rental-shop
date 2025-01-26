@@ -135,10 +135,13 @@ RETURN_MENU() {
       MAIN_MENU "That is not a valid bike number."
     else
       # check if input is rented
-      RENTAL_ID=$($PSQL"SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND bike_id = $BIKE_ID_TO_RETURN AND date_returned IS NULL;")
+      RENTAL_ID=$($PSQL"SELECT rental_id FROM rentals INNER JOIN customers USING(customer_id) WHERE phone = '$PHONE_NUMBER' AND bike_id = '$BIKE_ID_TO_RETURN' AND date_returned IS NULL;")
 
       # if input not rented
+      if [[ -z $RENTAL_ID ]]
+      then
       # send to main menu
+      fi
     fi
   fi
   fi
